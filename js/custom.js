@@ -34,10 +34,12 @@ const deleteUser = (allUsers, ind) =>{
     drawUsers(allUsers)
 }
 const editUser = (allUsers, ind) =>{   
-console.log(allUsers[ind].name);
+writeDataToStorage("edit",{index:ind,userData:allUsers[ind]})
+window.location.href="edit.html"
 console.log(allUsers[ind].gender);
   
 }
+
 
 const showUser = (allUsers, ind) =>{
     writeDataToStorage("single", {index: ind, userData: allUsers[ind]})
